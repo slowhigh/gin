@@ -525,7 +525,7 @@ func main() {
       return c.Writer.Status() < http.StatusInternalServerError
   }
   
-  engine.Use(gin.LoggerWithConfig(loggerConfig))
+  router.Use(gin.LoggerWithConfig(loggerConfig))
   router.Use(gin.Recovery())
   
   // skipped
